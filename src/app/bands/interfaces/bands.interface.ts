@@ -3,7 +3,7 @@ export interface Band {
     band_name:     string;
     photo:         string;
     description:   string;
-    date:          number;
+    date:          string;
     kind_of_music: string;
     video:         string;
 }

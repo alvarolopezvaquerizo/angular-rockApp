@@ -1,1 +1,58 @@
-<p>new-band works!</p>
+<h1>
+    {{ ( band.id ) ? 'Editar' : 'Nueva' }}
+    Banda
+    <small>{{ band.band_name }}</small>
+</h1>
+
+<form (ngSubmit)="save()" autocomplete="off" [formGroup]="myForm">
+
+    <div class="row">
+        <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="band.band_name" formControlName="band_name">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Foto Url</label>
+            <input type="text" class="form-control" [(ngModel)]="band.photo" formControlName="photo">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Descripción</label>
+            <textarea class="form-control" rows="3" [(ngModel)]="band.description" formControlName="description"></textarea>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Fecha</label>
+            <input type="text" class="form-control" [(ngModel)]="band.date" formControlName="date">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Tipo de musica</label>
+            <input type="text" class="form-control" [(ngModel)]="band.kind_of_music" formControlName="kind_of_music">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Video Url</label>
+            <input type="text" class="form-control" [(ngModel)]="band.video" formControlName="video">
+        </div>
+    </div>
+
+</form>
+
+<div class="row">
+    <div class="col-12 mt-3">
+        <button type="button" class="btn btn-danger" [routerLink]="['/list-bands']">Atras</button>
+        <button type="submit" class="btn btn-success float-end" (click)="save()">{{ ( band.id ) ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+</div>

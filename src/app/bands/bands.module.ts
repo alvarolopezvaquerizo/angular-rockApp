@@ -7,6 +7,8 @@ import { NewBandComponent } from './pages/new-band/new-band.component';
 import { MainComponent } from './pages/main/main.component';
 import { ViewBandComponent } from './pages/view-band/view-band.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { ViewBandComponent } from './pages/view-band/view-band.component';
   ],
   imports: [
     CommonModule,
-    BandsRoutingModule
+    BandsRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class BandsModule { }
