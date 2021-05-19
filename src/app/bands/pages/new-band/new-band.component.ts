@@ -60,11 +60,14 @@ export class NewBandComponent implements OnInit {
     }
 
     if ( this.band.id ) {
-      this.bandsService.updateBand( this.band );
+      this.bandsService.updateBand( this.band )
+        .subscribe( band => {
+          this.router.navigate(['/bands/list-bands']);
+        })
     } else {
       this.bandsService.addBand( this.band )
         .subscribe( band => {
-          this.router.navigate(['/list-bands', band.id]);
+          this.router.navigate(['/bands/list-bands', band.id]);
         })
     }
 

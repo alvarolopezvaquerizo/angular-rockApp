@@ -20,7 +20,7 @@ const routes: Routes = [
         component: NewBandComponent 
       },
       { 
-        path: 'new-band/:id', 
+        path: 'edit-band/:id', 
         component: NewBandComponent 
       },
       {
