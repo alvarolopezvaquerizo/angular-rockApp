@@ -1,0 +1,14 @@
+.table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.description-th {
+    width: 40%;
+}
+
+.description-td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
