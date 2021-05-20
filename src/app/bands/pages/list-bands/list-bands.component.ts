@@ -17,14 +17,19 @@ export class ListBandsComponent implements OnInit {
   constructor( private bandsService: BandsService ) { }
 
   ngOnInit(): void {
-
-    this.bandsService.getBands()
-      .subscribe( bands => this.bands = bands );
-
+    this.getListBands();
   }
 
-  deleteBand() {
-    //this.bandsService.deleteBand( this.bands.id! );
+  getListBands() {
+    this.bandsService.getBands()
+      .subscribe( bands => this.bands = bands );
+  }
+
+  deleteBandList( id: number ) {
+    this.bandsService.deleteBand( id )
+      .subscribe( band => {
+        this.getListBands();
+      });
   }
 
 }
