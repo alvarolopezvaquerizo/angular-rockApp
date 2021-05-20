@@ -7,7 +7,9 @@ import { NewBandComponent } from './pages/new-band/new-band.component';
 import { MainComponent } from './pages/main/main.component';
 import { ViewBandComponent } from './pages/view-band/view-band.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListBandsComponent,
     NewBandComponent,
     MainComponent,
-    ViewBandComponent
+    ViewBandComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     BandsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class BandsModule { }

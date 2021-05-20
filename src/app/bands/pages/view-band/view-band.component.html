@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-12">
                     <label class="form-label">Tipo de musica</label>
-                    <input type="text" class="form-control" [value]="band?.kind_of_music" disabled>
+                    <input type="text" class="form-control" [value]="band?.kind_of_music | titlecase" disabled>
                 </div>
             </div>
             

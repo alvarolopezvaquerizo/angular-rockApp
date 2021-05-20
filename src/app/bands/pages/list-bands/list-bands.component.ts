@@ -11,6 +11,7 @@ import { BandsService } from '../../services/bands.service';
 })
 export class ListBandsComponent implements OnInit {
 
+  filterBand = '';
   bands: Band[] = [];
 
   constructor( private bandsService: BandsService ) { }

@@ -22,6 +22,10 @@ export class BandsService {
     return this.http.get<Band>(`${ this.baseUrl }/bands/${ id }`);
   }
 
+  getSuggestions( termino: string ): Observable<Band[]> {
+    return this.http.get<Band[]>(`${ this.baseUrl }/bands?q=${ termino }`);
+  }
+
   addBand( band: Band ): Observable<Band> {
     return this.http.post<Band>(`${ this.baseUrl }/bands`, band);
   }
