@@ -5,7 +5,6 @@ import { switchMap } from 'rxjs/operators';
 import { Band } from '../../interfaces/bands.interface';
 import { BandsService } from '../../services/bands.service';
 
-import Swal from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

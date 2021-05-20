@@ -1,1 +1,67 @@
-<p>view-band works!</p>
+<div class="row">
+    <div class="col-6">
+        <h1>Banda {{ band?.band_name }}
+            <img class="float-end" :[src]=band?.photo>
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <form>
+
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" [value]="band?.band_name" disabled>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Foto Url</label>
+                    <input type="text" class="form-control" [value]="band?.photo" disabled>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Descripción</label>
+                    <textarea class="form-control" rows="10" [value]="band?.description" disabled></textarea>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Fecha</label>
+                    <input type="text" class="form-control" [value]="band?.date" disabled>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Tipo de musica</label>
+                    <input type="text" class="form-control" [value]="band?.kind_of_music" disabled>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Video Url</label>
+                    <input type="text" class="form-control" [value]="band?.video" disabled>
+                </div>
+            </div>
+        
+        </form>
+    </div>
+
+    <div class="video col-6" *ngIf="band?.video">
+        <iframe width="650" height="400" src="https://www.youtube.com/embed/aUgzif5-cbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mt-3">
+        <button type="button" class="btn btn-danger" [routerLink]="['/bands/list-bands']">Atras</button>
+    </div>
+</div>

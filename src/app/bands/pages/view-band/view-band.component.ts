@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+
+import { Band } from '../../interfaces/bands.interface';
+import { BandsService } from '../../services/bands.service';
 
 @Component({
   selector: 'app-view-band',
@@ -7,9 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewBandComponent implements OnInit {
 
-  constructor() { }
+  band!: Band;
+
+  constructor(  private activatedRoute: ActivatedRoute,
+                private bandsService: BandsService ) { }
 
   ngOnInit(): void {
+
+    this.activatedRoute.params
+      .pipe(
+        switchMap( ({ id }) => this.bandsService.getBandForId(id) )
+      )
+      .subscribe( band => this.band = band );
+
   }
 
 }

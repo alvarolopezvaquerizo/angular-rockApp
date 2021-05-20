@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 import { Band } from '../../interfaces/bands.interface';
 
@@ -14,15 +13,17 @@ export class ListBandsComponent implements OnInit {
 
   bands: Band[] = [];
 
-  constructor( private bandsService: BandsService,
-               private activatedRoute: ActivatedRoute,
-               private router: Router, ) { }
+  constructor( private bandsService: BandsService ) { }
 
   ngOnInit(): void {
 
     this.bandsService.getBands()
       .subscribe( bands => this.bands = bands );
 
+  }
+
+  deleteBand() {
+    //this.bandsService.deleteBand( this.bands.id! );
   }
 
 }
