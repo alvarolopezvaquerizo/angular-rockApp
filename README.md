@@ -1,3 +1,10 @@
+## INSTRUCCIONES DE USO DE LA APLICACION PARA SU FUNCIONAMIENTO
+
+1 - Descargar en local la API del enlace: https://github.com/alvarolopezvaquerizo/api-rockApp
+2 - Una vez descargado poner en la terminal donde esta ubicado el archivo db.json y ejecutar el comando: json-server --watch db.json
+3 - Descargar en local este proyecto y poner en la terminal donde esta el proyecto en local y ejecutar el comando: ng serve
+4 - Una vez levantado la API y el proyecto ya se podran visualizar la lista, añadir, modificar, ver y eliminar una banda de rock.
+
 # RockApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
@@ -25,7 +32,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## INSTRUCCIONES DE USO DE LA APLICACION PARA SU FUNCIONAMIENTO
-
-xxx
