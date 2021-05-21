@@ -6,3 +6,16 @@ img {
 .video {
     margin-top: 32px;
 }
+
+.form-band {
+    width: 100%;
+}
+
+iframe {
+    width: 400px;
+    height: 300px;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}

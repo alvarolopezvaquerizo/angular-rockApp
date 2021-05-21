@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-6">
+    <div class="form-band col-6">
         <h1>Banda {{ band?.band_name }}
             <img class="float-end" :[src]=band?.photo>
         </h1>
@@ -7,7 +7,7 @@
 </div>
 
 <div class="row">
-    <div class="col-6">
+    <div class="form-band col-6">
         <form>
 
             <div class="row">
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="buttons row">
     <div class="col-12 mt-3">
         <button type="button" class="btn btn-danger" [routerLink]="['/bands/list-bands']">Atras</button>
     </div>

@@ -16,3 +16,26 @@ input {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+/*RESPONSIVE*/
+@media(max-width: 768px) {
+    .table {
+        display: none;
+    }
+
+    .card-list {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 48%;
+    }
+}
+
+@media(min-width: 769px) {
+    .card-list {
+        display: none;
+        margin-top: 10px;
+    }
+}
